@@ -22,7 +22,7 @@ install:
   - export FDK_EXE=$HOME/bin/FDK/Tools/linux
   
 script:
-  - make all                    # -f Makefile.ff uses only Fontforge
+  - make -f Makefile.ff           # -f Makefile.ff uses only Fontforge
 
 notifications:
   email: false

@@ -70,7 +70,7 @@ fg.ttf : src/FoulisGreek.ufo
 	python util/simplegen.py src/FoulisGreek.ufo fg.ttf ;
 
 clean :
-	rm -f *.ttf ; rm -f *.woff
+	rm -f *.ttf ; rm -f *.woff ; rm -f current.fpr ; rm -f *.tmp
 
 dist :
 	zip -r junicode-$(VERSION).zip *.ttf doc/*.pdf

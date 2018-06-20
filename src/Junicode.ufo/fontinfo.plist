@@ -7,7 +7,7 @@
 	<key>capHeight</key>
 	<integer>1358</integer>
 	<key>copyright</key>
-	<string>Copyright (c) 1998-2017 by Peter S. Baker</string>
+	<string>Copyright (c) 2018 by James P. Ascher</string>
 	<key>descender</key>
 	<integer>-410</integer>
 	<key>familyName</key>
@@ -33,12 +33,11 @@ tilde above lc circumflex 450</string>
 	<key>openTypeHheaLineGap</key>
 	<integer>0</integer>
 	<key>openTypeNameDesigner</key>
-	<string>Peter S. Baker</string>
+	<string>Peter S. Baker and James P. Ascher</string>
 	<key>openTypeNameDesignerURL</key>
-	<string>http://junicode.sourceforge.net/</string>
+	<string>https://github.com/cacology/junicode-restoration</string>
 	<key>openTypeNameLicense</key>
-	<string>Copyright (c) 2017, Peter S. Baker,
-with Reserved Font Name Junicode.
+	<string>Copyright (c) 2018, James P. Ascher.
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
@@ -134,13 +133,13 @@ OTHER DEALINGS IN THE FONT SOFTWARE.</string>
 	<key>openTypeNameLicenseURL</key>
 	<string>http://scripts.sil.org/OFL</string>
 	<key>openTypeNameManufacturer</key>
-	<string>Briery Creek Software</string>
+	<string>JPSA Research</string>
 	<key>openTypeNameManufacturerURL</key>
-	<string>http://junicode.sourceforge.net/</string>
+	<string>https://github.com/cacology/junicode-restoration</string>
 	<key>openTypeNameUniqueID</key>
-	<string>Peter S.Baker: Junicode: 0.900</string>
+	<string>James P. Ascher: Junicode-restoration: 0.900</string>
 	<key>openTypeNameVersion</key>
-	<string>Version 1.001</string>
+	<string>Version 1.000</string>
 	<key>openTypeOS2FamilyClass</key>
 	<array>
 		<integer>1</integer>
@@ -213,9 +212,9 @@ OTHER DEALINGS IN THE FONT SOFTWARE.</string>
 	<key>postscriptFamilyOtherBlues</key>
 	<array/>
 	<key>postscriptFontName</key>
-	<string>Junicode</string>
+	<string>Junicode-restoration</string>
 	<key>postscriptFullName</key>
-	<string>Junicode</string>
+	<string>Junicode-restoration</string>
 	<key>postscriptOtherBlues</key>
 	<array>
 		<integer>-578</integer>

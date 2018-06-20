@@ -90,7 +90,7 @@ markClass @combining_below <anchor 0 -75> @below_center;
 	      	  scircumflex scedilla scaron tcommaaccent tcaron tbar
 	      	  utilde umacron ubreve uring uhungarumlaut uogonek
 	      	  wcircumflex ycircumflex zacute zdotaccent zcaron
-	      	  longs uni0180 uni0183 uni0185 uni0188 uni018C
+	      	  longs longs.alt uni0180 uni0183 uni0185 uni0188 uni018C
 	      	  uni018D florin uni0195 uni0199 uni019A uni019B
 	      	  uni019E ohorn uni01A3 uni01A5 uni01A8 uni01AA
 	      	  uni01AB uni01AD uhorn uni01B4 uni01B6 uni01B9
@@ -260,7 +260,7 @@ feature aalt {
     sub j from [ j.alt uniEEEB u1033E uniE551 uniE552 jhighoverline j.sc uni02B2 uniF6BE ];
     sub k from [ uniF208 uniF209 uniEEEC uniF221 uniF195 u1033A uni1E33 k.sc uni1D4F ];
     sub l from [ uniEEED uniF222 u1033B uni1E37 uniE5B1 lhighoverline l.sc uni02E1 ];
-    sub longs from [ s uniE7C2 uniEEDF ];
+    sub longs from [ longs.alt s uniE7C2 uniEEDF ];
     sub lslash by lslash.sc ;
     sub m from [ uniEEEE uniF23C uniF225 uniF223 uniF23D uniF226 u1033C uni1E43 uniE5D2 
 	mhighoverline m.sc uni1D50 ];
@@ -289,7 +289,7 @@ feature aalt {
     sub questiondown by questiondown.sc ;
     sub r from [ uni027C uniA75B uniA783 uniEEF3 u10342 uni1E5B r.sc uniF19B uni02B3 ];
     sub rcaron by rcaron.sc ;
-    sub s from [ uniEEF4 longs uniEEDF uniF127 uniF128 uniA785 u10343 uni1E63 s.sc 
+    sub s from [ uniEEF4 longs longs.alt uniEEDF uniF127 uniF128 uniA785 u10343 uni1E63 s.sc 
 	uni02E2 ];
     sub sacute by sacute.sc ;
     sub scaron by scaron.sc ;
@@ -539,6 +539,7 @@ lookup Misc_Lookups {
     sub f by f.alt ;
     sub i by dotlessi ;
     sub j by uniF6BE ;
+    sub longs by longs.alt ;
     sub eth by eth.alt ;
     sub uniFB00 by f_f.alt ;
 } Misc_Lookups ;
@@ -1374,7 +1375,7 @@ lookup salt_Stylistic_Alternates_B {
     sub m from [ uniEEEE uniF23C uniF225 uniF223 uniF23D uniF226 ] ;
     sub n from [ uniEEEF uniF228 uniF19A ] ;
     sub r from [ uni027C uniA75B uniA783 uniEEF3 ] ;
-    sub s from [ uniEEF4 longs uniEEDF uniF127 uniF128 uniA785 ] ;
+    sub s from [ uniEEF4 longs longs.alt uniEEDF uniF127 uniF128 uniA785 ] ;
     sub t from [ uniEEF5 uniA787 uniF199 ] ;
     sub v from [ uniEEF8 uni01BF uniA769 uni1EFD ] ;
     sub w from [ uniEEF9 uni01BF uniA769 ] ;
@@ -2214,7 +2215,7 @@ lookup mark_Mark_Positioning {
   pos base [  uniF21A ]
       	     <anchor 462 1030> mark @above_center
   	     <anchor 462 -75> mark @below_center ;
-  pos base [  f f.alt ]
+  pos base [  f f.alt longs.alt ]
       	     <anchor 500 1545> mark @above_center
 	     <anchor 279 -75> mark @below_center ;
   pos base [  g uniF21D uniF21E ]
@@ -3735,7 +3736,7 @@ lookup kern_Horizontal_Kerning {
     @kc59_first_21 = [  e oe ] ;
     @kc59_first_22 = [  f uniFB00 ] ;
     @kc59_first_23 = [  f.sc uniF766 ] ;
-    @kc59_first_24 = [  f.alt f_f.alt ] ;
+    @kc59_first_24 = [  f.alt f_f.alt longs.alt ] ;
     @kc59_first_25 = [  g ] ;
     @kc59_first_26 = [  h m n ] ;
     @kc59_first_27 = [  i ] ;
@@ -4770,7 +4771,7 @@ feature kern {
 	       gcaron gcircumflex gcommaaccent gdotaccent h h.sc
 	       hcircumflex i i.sc iacute ibreve icircumflex idieresis
 	       igrave imacron iogonek itilde j j.alt j.sc jcircumflex
-	       k k.sc kcommaaccent l l.sc lacute lcommaaccent longs
+	       k k.sc kcommaaccent l l.sc lacute lcommaaccent longs longs.alt
 	       lslash m m.sc n n.sc nacute ncaron ncommaaccent ntilde
 	       o o.sc oacute obreve ocircumflex odieresis oe oe.sc
 	       ograve ohorn ohungarumlaut omacron omega oslash

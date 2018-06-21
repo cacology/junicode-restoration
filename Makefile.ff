@@ -29,7 +29,7 @@ endef
 
 all : regular bold italic bolditalic greek
 
-regular : Junicode.ttf
+regular : JuniRType.ttf
 
 bold : Junicode-Bold.ttf
 
@@ -39,8 +39,8 @@ bolditalic : Junicode-BoldItalic.ttf
 
 greek : FoulisGreek.ttf
 
-Junicode.ttf : jr.ttf
-	$(call generate_font,jr,Junicode)
+JuniRType.ttf : jr.ttf
+	$(call generate_font,jr,JuniRType)
 
 jr.ttf : src/Junicode.ufo
 	python util/simplegen.py src/Junicode.ufo jr.ttf ;

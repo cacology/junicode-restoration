@@ -90,7 +90,7 @@ markClass @combining_below <anchor 0 -75> @below_center;
 	      	  scircumflex scedilla scaron tcommaaccent tcaron tbar
 	      	  utilde umacron ubreve uring uhungarumlaut uogonek
 	      	  wcircumflex ycircumflex zacute zdotaccent zcaron
-	      	  longs longs.alt uni0180 uni0183 uni0185 uni0188 uni018C
+	      	  longs uni0180 uni0183 uni0185 uni0188 uni018C
 	      	  uni018D florin uni0195 uni0199 uni019A uni019B
 	      	  uni019E ohorn uni01A3 uni01A5 uni01A8 uni01AA
 	      	  uni01AB uni01AD uhorn uni01B4 uni01B6 uni01B9
@@ -114,6 +114,8 @@ markClass @combining_below <anchor 0 -75> @below_center;
 @double_diacritics = [ uni1DCD uni035D uni035E uni0360 uni0361 uni035C uni035F ] ;
 
 @eff = [ f uniFB00 ] ;
+
+@ess = [ longs uniE1AB ] ;
 
 # GSUB
 
@@ -542,6 +544,7 @@ lookup Misc_Lookups {
     sub longs by longs.alt ;
     sub eth by eth.alt ;
     sub uniFB00 by f_f.alt ;
+    sub uniE1AB by longs_longs.alt ;
 } Misc_Lookups ;
 
 lookup ccmp_i_to_dotlessi {
@@ -1864,9 +1867,27 @@ lookup calt_Non_Colliding_f {
     		      obreve umacron ubreve uni01E3 ] ;
     @eyemacron = [ imacron ] ;
     @ethth = [ eth ] ;
+    @ascenders = [i b h k l bar ];
     sub @eff' lookup Misc_Lookups  @high_diacritics ;
+    sub @eff' lookup Misc_Lookups @ascenders ;
     sub @eyemacron @ethth' lookup Misc_Lookups ;
 } calt_Non_Colliding_f ;
+
+lookup calt_Non_Colliding_longs {
+  lookupflag 0 ;
+    @high_diacritics = [ agrave acircumflex atilde adieresis aring egrave
+    		      ecircumflex edieresis igrave iacute icircumflex
+    		      idieresis ograve ocircumflex otilde odieresis
+    		      ugrave ucircumflex udieresis ydieresis amacron
+    		      abreve emacron ebreve imacron ibreve omacron
+    		      obreve umacron ubreve uni01E3 ] ;
+    @eyemacron = [ imacron ] ;
+    @ethth = [ eth ] ;
+    @ascenders = [i b h k l bar ];
+    sub @ess' lookup Misc_Lookups  @high_diacritics ;
+    sub @ess' lookup Misc_Lookups @ascenders ;
+} calt_Non_Colliding_longs ;
+
 
 lookup calt_Non_Colliding_J {
   lookupflag IgnoreMarks ;
@@ -2041,6 +2062,7 @@ feature liga {
 
 feature calt {
   lookup calt_Non_Colliding_f ;
+  lookup calt_Non_Colliding_longs ;
   lookup calt_Non_Colliding_J ;
   lookup calt_Old_Punctuation_Cleanup ;
 } calt ;
@@ -3736,7 +3758,7 @@ lookup kern_Horizontal_Kerning {
     @kc59_first_21 = [  e oe ] ;
     @kc59_first_22 = [  f uniFB00 ] ;
     @kc59_first_23 = [  f.sc uniF766 ] ;
-    @kc59_first_24 = [  f.alt f_f.alt longs.alt ] ;
+    @kc59_first_24 = [  f.alt f_f.alt longs.alt longs f uniE1AB longs_longs.alt ] ;
     @kc59_first_25 = [  g ] ;
     @kc59_first_26 = [  h m n ] ;
     @kc59_first_27 = [  i ] ;
@@ -3816,7 +3838,7 @@ lookup kern_Horizontal_Kerning {
 	f_odieresis f_f_udieresis ] ;
     @kc59_second_20 = [  g ] ;
     @kc59_second_21 = [  hyphen hyphen.cap ] ;
-    @kc59_second_22 = [  icircumflex igrave imacron ] ;
+    @kc59_second_22 = [  icircumflex igrave imacron b h k l ] ;
     @kc59_second_23 = [  idieresis ] ;
     @kc59_second_24 = [  j ] ;
     @kc59_second_25 = [  m n r ] ;

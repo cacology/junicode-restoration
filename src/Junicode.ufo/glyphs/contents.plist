@@ -806,6 +806,8 @@
 	<string>longs.glif</string>
        	<key>longs.alt</key>
 	<string>longs.alt.glif</string>
+        <key>longs_longs.alt</key>
+        <string>longs_longs.alt.glif</string>
 	<key>longslash</key>
 	<string>longslash.glif</string>
 	<key>lozenge</key>

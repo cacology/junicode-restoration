@@ -1,0 +1,10 @@
+#!Z:\adobe\github\opensource\afdko\FDK\Tools\win\Python\AFDKOPython27\python.exe
+# EASY-INSTALL-ENTRY-SCRIPT: 'ufonormalizer==0.1','console_scripts','ufonormalizer'
+__requires__ = 'ufonormalizer==0.1'
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.exit(
+        load_entry_point('ufonormalizer==0.1', 'console_scripts', 'ufonormalizer')()
+    )

@@ -1,0 +1,5 @@
+#!/home/rroberts/Desktop/afdko/FDK/Tools/linux/Python/AFDKOPython27/bin/python2.7
+
+import pydoc
+if __name__ == '__main__':
+    pydoc.cli()

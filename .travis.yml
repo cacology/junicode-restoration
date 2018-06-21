@@ -1,0 +1,42 @@
+language: python
+virtualenv:
+  system_site_packages: true
+sudo: required
+dist: trusty
+python:
+  - "2.7"
+
+addons:
+  apt:
+    packages:
+      - fontforge
+      - python-fontforge
+      - ttfautohint
+
+install:
+  - pip install fonttools
+  - curl http://download.macromedia.com/pub/developer/opentype/FDK.2.5.65322/FDK-25-LINUX.b65322.zip > FDK-25-LINUX.b65322.zip
+  - unzip FDK-25-LINUX.b65322.zip
+  - sudo ./FDK-25-LINUX.b65322/FinishInstallLinux
+  - export PATH=$HOME/bin/FDK/Tools/linux:$PATH
+  - export FDK_EXE=$HOME/bin/FDK/Tools/linux
+  
+script:
+  - make -f Makefile.ff           # -f Makefile.ff uses only Fontforge
+
+notifications:
+  email: false
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
+    target_branch: gh-pages
+
+cache:
+  - packages
+  - pip
+  
+

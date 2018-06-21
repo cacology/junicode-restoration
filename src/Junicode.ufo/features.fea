@@ -3758,7 +3758,7 @@ lookup kern_Horizontal_Kerning {
     @kc59_first_21 = [  e oe ] ;
     @kc59_first_22 = [  f uniFB00 ] ;
     @kc59_first_23 = [  f.sc uniF766 ] ;
-    @kc59_first_24 = [  f.alt f_f.alt longs.alt longs f uniE1AB longs_longs.alt ] ;
+    @kc59_first_24 = [  f.alt f_f.alt ] ;
     @kc59_first_25 = [  g ] ;
     @kc59_first_26 = [  h m n ] ;
     @kc59_first_27 = [  i ] ;
@@ -3798,7 +3798,8 @@ lookup kern_Horizontal_Kerning {
     @kc59_first_60 = [  u10344 ] ;
     @kc59_first_61 = [  u10345 ] ;
     @kc59_first_62 = [  u10349 ] ;
-    @kc59_first_63 = [  longs ] ;
+    @kc59_first_63 = [  longs uniE1AB ] ;
+    @kc59_first_64 = [ longs.alt longs_longs.alt ] ;
     @kc59_second_1 = [  A Aacute Abreve Acircumflex Adieresis Agrave Amacron Aogonek Aring 
 	Aringacute Atilde uni01CD uni01DE uni01E0 uni0200 uni0226 
 	uni1E00 uni1EA0 uni1EA2 uni1EA4 uni1EA6 uni1EA8 uni1EAA uni1EAC 
@@ -3838,7 +3839,7 @@ lookup kern_Horizontal_Kerning {
 	f_odieresis f_f_udieresis ] ;
     @kc59_second_20 = [  g ] ;
     @kc59_second_21 = [  hyphen hyphen.cap ] ;
-    @kc59_second_22 = [  icircumflex igrave imacron b h k l ] ;
+    @kc59_second_22 = [  icircumflex igrave imacron ] ;
     @kc59_second_23 = [  idieresis ] ;
     @kc59_second_24 = [  j ] ;
     @kc59_second_25 = [  m n r ] ;
@@ -3876,6 +3877,8 @@ lookup kern_Horizontal_Kerning {
     @kc59_second_55 = [  u10344 ] ;
     @kc59_second_56 = [  u10345 ] ;
     @kc59_second_57 = [  u10349 ] ;
+    @kc59_second_58 = [ h k l ] ;
+    @kc59_second_59 = [ b ] ;
     pos @kc59_first_1 @kc59_second_2 -105 ;
     pos @kc59_first_1 @kc59_second_3 -215 ;
     pos @kc59_first_1 @kc59_second_4 -200 ;
@@ -4045,6 +4048,8 @@ lookup kern_Horizontal_Kerning {
     pos @kc59_first_22 @kc59_second_39 120 ;
     pos @kc59_first_22 @kc59_second_43 150 ;
     pos @kc59_first_22 @kc59_second_45 191 ;
+    pos @kc59_first_22 @kc59_second_58 121 ;
+    pos @kc59_first_22 @kc59_second_59 147 ;
     pos @kc59_first_23 @kc59_second_7 -100 ;
     pos @kc59_first_23 @kc59_second_9 -100 ;
     pos @kc59_first_23 @kc59_second_14 -50 ;
@@ -4052,6 +4057,8 @@ lookup kern_Horizontal_Kerning {
     pos @kc59_first_24 @kc59_second_22 110 ;
     pos @kc59_first_24 @kc59_second_23 164 ;
     pos @kc59_first_24 @kc59_second_43 55 ;
+    pos @kc59_first_24 @kc59_second_58 55 ;
+    pos @kc59_first_24 @kc59_second_59 75 ;
     pos @kc59_first_25 @kc59_second_24 50 ;
     pos @kc59_first_25 @kc59_second_27 60 ;
     pos @kc59_first_25 @kc59_second_31 60 ;
@@ -4682,6 +4689,14 @@ lookup kern_Horizontal_Kerning {
     pos @kc59_first_62 @kc59_second_53 -40 ;
     pos @kc59_first_62 @kc59_second_57 100 ;
     pos @kc59_first_63 @kc59_second_10 300 ;
+    pos @kc59_first_63 @kc59_second_58 145 ;
+    pos @kc59_first_63 @kc59_second_59 168 ;
+    pos @kc59_first_64 @kc59_second_8 109 ;
+    pos @kc59_first_64 @kc59_second_22 110 ;
+    pos @kc59_first_64 @kc59_second_23 164 ;
+    pos @kc59_first_64 @kc59_second_43 55 ;
+    pos @kc59_first_64 @kc59_second_58 68 ;
+    pos @kc59_first_64 @kc59_second_59 92 ;
 } kern_Horizontal_Kerning ;
 
 lookup Contextual_Kerning_01 {
